@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Sistema de Gestão de Consultas UVV</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="brand" asp-controller="Home" asp-action="Index">Consultas UVV</a>
+            <div class="nav-links">
+                @if (User.Identity != null && User.Identity.IsAuthenticated)
+                {
+                    <span>Olá, @User.Identity.Name</span>
+                    <a asp-controller="Consultas" asp-action="Index">Minhas Consultas</a>
+                    <form asp-controller="Conta" asp-action="Logout" method="post" class="inline-form">
+                        <button type="submit" class="link-button">Sair</button>
+                    </form>
+                }
+                else
+                {
+                    <a asp-controller="Conta" asp-action="Login">Login</a>
+                    <a asp-controller="Conta" asp-action="Registrar">Cadastrar</a>
+                }
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        @if (TempData["Sucesso"] != null)
+        {
+            <div class="alert alert-success">@TempData["Sucesso"]</div>
+        }
+        @RenderBody()
+    </main>
+
+    <footer>
+        <p>&copy; @DateTime.Now.Year - Sistema de Gestão de Consultas UVV</p>
+    </footer>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

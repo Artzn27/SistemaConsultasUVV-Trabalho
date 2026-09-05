@@ -1,0 +1,66 @@
+* { box-sizing: border-box; }
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background: #f4f6f8;
+    color: #222;
+}
+.navbar {
+    background: #2c3e50;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+}
+.navbar a, .navbar .link-button {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.navbar .brand { font-weight: bold; font-size: 1.2rem; margin-left: 0; }
+.inline-form { display: inline; }
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+.alert-success {
+    background: #d4edda;
+    color: #155724;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+.text-danger { color: #c0392b; font-size: 0.9rem; }
+form label { display: block; margin-top: 1rem; font-weight: 600; }
+form input, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button, .btn {
+    display: inline-block;
+    margin-top: 1.2rem;
+    padding: 0.6rem 1.2rem;
+    background: #2980b9;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+button.btn-danger, .btn-danger { background: #c0392b; }
+table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+table th, table td { text-align: left; padding: 0.6rem; border-bottom: 1px solid #eee; }
+.actions a, .actions button { margin-right: 0.5rem; }
+footer { text-align: center; padding: 1rem; color: #888; font-size: 0.85rem; }
